@@ -12,7 +12,7 @@ if(isset($_POST['login'])){
 
     if(mysqli_num_rows($result) == 1){
         $_SESSION['admin'] = $username;
-        header("Location: admin_dashboard.php");
+        header("Location: dashboard.php");
         exit();
     } else {
         echo "Invalid username or password!";
