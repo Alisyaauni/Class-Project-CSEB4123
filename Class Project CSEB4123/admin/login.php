@@ -34,6 +34,6 @@ if(isset($_POST['login'])){
     <input type="password" name="password" placeholder="Password" required><br><br>
     <button type="submit" name="login">Login</button>
 </form>
-test
+
 </body>
 </html>
