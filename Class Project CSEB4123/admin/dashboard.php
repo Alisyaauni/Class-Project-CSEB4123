@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 session_start();
 if (!isset($_SESSION['admin'])) {
@@ -72,5 +72,3 @@ if (!isset($_SESSION['admin'])) {
 
 </body>
 </html>
-=======
->>>>>>> e11da15cbed2003afeb6c0a325683077cee6a23f
