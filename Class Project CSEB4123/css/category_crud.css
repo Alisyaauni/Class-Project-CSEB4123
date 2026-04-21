@@ -1,0 +1,161 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    background: #f1f5f9;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    flex: 1;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #cbd5e1;
+    padding: 10px;
+    display: block;
+    border-radius: 8px;
+}
+
+.sidebar ul li a:hover {
+    background: #1e293b;
+    color: white;
+}
+
+/* LOGOUT */
+.logout {
+    text-decoration: none;
+    background: #ef4444;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* TOPBAR */
+.topbar {
+    margin-bottom: 20px;
+}
+
+/* FORM CARD */
+.form-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.form-card input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-card button {
+    padding: 10px 15px;
+    background: #3b82f6;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-card button:hover {
+    background: #2563eb;
+}
+
+/* TABLE CARD */
+.table-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #e2e8f0;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+/* INPUT INSIDE TABLE */
+td input {
+    padding: 6px;
+    width: 90%;
+}
+
+/* BUTTONS */
+.update-btn {
+    background: #22c55e;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.update-btn:hover {
+    background: #16a34a;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
