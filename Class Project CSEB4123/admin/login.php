@@ -2,7 +2,6 @@
 session_start();
 include("../db.php");
 
-
 if(isset($_POST['login'])){
 
     $username = $_POST['username'];
