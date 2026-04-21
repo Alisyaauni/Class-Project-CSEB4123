@@ -1,6 +1,7 @@
 <?php
 session_start();
-include("db_connect.php");
+include("../db.php");
+
 
 if(isset($_POST['login'])){
 
@@ -24,16 +25,26 @@ if(isset($_POST['login'])){
 <html>
 <head>
     <title>Admin Login</title>
+    <link rel="stylesheet" href="../css/admin_login.css">
 </head>
 <body>
 
-<h2>Admin Login</h2>
+<div class="login-card">
 
-<form method="POST">
-    <input type="text" name="username" placeholder="Username" required><br><br>
-    <input type="password" name="password" placeholder="Password" required><br><br>
-    <button type="submit" name="login">Login</button>
-</form>
+    <h2>Admin Login</h2>
 
+    <form method="POST">
+
+        <input type="text" name="username" placeholder="Username" required>
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit" name="login" class="login-btn">Login</button>
+
+        <button type="reset" class="refresh-btn">Reset</button>
+
+    </form>
+
+</div>
 </body>
 </html>
