@@ -41,7 +41,6 @@ $sql2 = "SELECT categories.category_name
         WHERE registrations.users_id = '$users_id'";
 
 $result2 = mysqli_query($conn, $sql2);
-$userdata2= mysqli_fetch_array($result2, MYSQLI_BOTH);
 ?>
 
 <body>
@@ -91,8 +90,11 @@ $userdata2= mysqli_fetch_array($result2, MYSQLI_BOTH);
 <div class="border border-black w-50 p-3">
   <p>Events Joined:</p>
 <ol>
+  <?php while($userdata2= mysqli_fetch_array($result2, MYSQLI_BOTH)){ ?>
   <li><?php echo $userdata2["category_name"] ?></li>
+  <?php } ?>
 </ol>
+
 <a href="join_event.php" class="btn btn-primary">Join More</a>
 </div>
 </div>
