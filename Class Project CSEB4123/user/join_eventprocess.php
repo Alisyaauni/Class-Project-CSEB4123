@@ -18,15 +18,20 @@ $check = "SELECT * FROM registrations
           WHERE users_id='$users_id' AND category_id='$category_id'";
 $result = mysqli_query($conn, $check);
 
+if (mysqli_num_rows($result) == 0) {
 
-$insert_sql="INSERT INTO registrations (users_id , category_id) VALUES ($category, $users_id)";
+    $insert = "INSERT INTO registrations (users_id, category_id) 
+               VALUES ('$users_id', '$category_id')";
 
-$sql_result=mysqli_query($conn,$insert_sql);
+    if (mysqli_query($conn, $insert)) {
+        echo "Successfully registered!";
+    } else {
+        echo "Error inserting data";
+    }
 
-if($sql_result)
-echo "Succesfully register the category. ";
-else
-echo "Error in updating the data";
+} else {
+    echo "You already registered for this category!";
+}
 ?>
 </div>
 <div class="container mt-5 p-1">

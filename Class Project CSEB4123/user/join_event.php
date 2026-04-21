@@ -69,7 +69,7 @@ $resultsqlcategory = mysqli_query($conn, $sqlcategory);
     <div class="row mb-3">
     <label class="col-sm-2 col-form-label">Category:</label>
     <div class="col-sm-10">
-      <select class="form-select" aria-label="Default select example">
+      <select class="form-select" name="category_id" aria-label="Default select example">
         <option selected>Open this select menu</option>
         <?php while($categorydata = mysqli_fetch_array($resultsqlcategory, MYSQLI_BOTH)){ ?>;
         <option name="category_id" value="<?php echo $categorydata["category_id"];?>">
