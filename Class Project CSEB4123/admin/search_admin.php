@@ -2,9 +2,9 @@
 session_start();
 include "../db.php";
 
-// 🔒 Protect admin
+// Protect admin
 if(!isset($_SESSION['admin'])){
-    header("Location: admin_login.php");
+    header("Location: login.php");
     exit();
 }
 
