@@ -30,7 +30,7 @@ if(isset($_POST['login'])){
 
 <div class="login-card">
 
-    <h2>Admin Login</h2>
+    <h2>Welcome, Admin!</h2>
 
     <form method="POST">
 
