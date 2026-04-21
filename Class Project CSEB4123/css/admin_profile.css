@@ -1,0 +1,132 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    background: #f1f5f9;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    flex: 1;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #cbd5e1;
+    padding: 10px;
+    display: block;
+    border-radius: 8px;
+}
+
+.sidebar ul li a:hover {
+    background: #1e293b;
+    color: white;
+}
+
+/* LOGOUT */
+.logout {
+    text-decoration: none;
+    background: #ef4444;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+}
+
+/* MAIN AREA */
+.main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CENTER WRAPPER */
+.profile-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.profile-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profile-img img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3b82f6;
+}
+
+/* FORM */
+.profile-card label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.profile-card input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+}
+
+/* BUTTON */
+.profile-card button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.profile-card button:hover {
+    background: #2563eb;
+}
