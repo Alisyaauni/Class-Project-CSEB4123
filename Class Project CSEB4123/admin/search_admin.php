@@ -38,6 +38,7 @@ $result = mysqli_query($conn, $sql);
 <meta charset="UTF-8">
 <title>Admin Dashboard</title>
 <link rel="stylesheet" href="../css/admindashboard.css">
+<link rel="stylesheet" href="../css/search_admin.css">
 </head>
 
 <body>
