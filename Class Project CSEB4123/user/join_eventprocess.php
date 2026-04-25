@@ -35,19 +35,19 @@ $result = mysqli_query($conn, $check);
 
 if (mysqli_num_rows($result) == 0) {
 
-    // ✅ STEP 1: get quota
+    // get quota
     $quota_query = "SELECT quota FROM categories WHERE category_id='$category_id'";
     $quota_result = mysqli_query($conn, $quota_query);
     $quota_row = mysqli_fetch_assoc($quota_result);
     $quota = $quota_row['quota'];
 
-    // ✅ STEP 2: count current participants
+    // count current participants
     $count_query = "SELECT COUNT(*) as total FROM registrations WHERE category_id='$category_id'";
     $count_result = mysqli_query($conn, $count_query);
     $count_row = mysqli_fetch_assoc($count_result);
     $current_total = $count_row['total'];
 
-    // ✅ STEP 3: compare
+    // compare
     if ($current_total >= $quota) {
         echo "<div class='alert alert-danger'>Sorry, this event is already full!</div>";
     } else {

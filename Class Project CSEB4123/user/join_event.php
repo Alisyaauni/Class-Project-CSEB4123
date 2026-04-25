@@ -12,17 +12,13 @@ include "../db.php";
 
 session_start();
 
-// ✅ FIX: check login
+// FIX: check login
 if (!isset($_SESSION["users_id"])) {
     header("Location: login.php");
     exit();
 }
 
-// ❌ REMOVED fake session
-// $_SESSION["users_id"] = 1;
-// $_SESSION['username'] = "testuser";
-
-// ✅ use real logged-in user
+// use real logged-in user
 $users_id = $_SESSION["users_id"];
 
 // get user data

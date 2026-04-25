@@ -12,13 +12,13 @@
 session_start();
 include "..\db.php";
 
-// ✅ CHECK LOGIN
+// CHECK LOGIN
 if (!isset($_SESSION["users_id"])) {
     header("Location: login.php");
     exit();
 }
 
-// ✅ USE SESSION (NOT POST)
+// USE SESSION (NOT POST)
 $users_id = $_SESSION["users_id"];
 
 // GET FORM DATA
@@ -38,7 +38,7 @@ $update_sql = "UPDATE users
 $sql_result = mysqli_query($conn, $update_sql);
 
 if ($sql_result) {
-    // ✅ update session username if changed
+    // update session username if changed
     $_SESSION["username"] = $username;
 
     echo "<div class='alert alert-success'>Successfully updated the data.</div>";

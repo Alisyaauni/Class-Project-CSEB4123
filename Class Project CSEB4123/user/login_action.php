@@ -14,7 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
         $user = mysqli_fetch_assoc($result);
 
-        // ✅ STORE REAL USER DATA
+        // STORE REAL USER DATA
         $_SESSION['users_id'] = $user['users_id'];
         $_SESSION['username'] = $user['username'];
 
