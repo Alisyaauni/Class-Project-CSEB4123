@@ -90,6 +90,7 @@ $result2 = mysqli_query($conn, $sql2);
 </ol>
 
 <a href="join_event.php" class="btn btn-primary">Join More</a>
+<a href="logout.php" class="btn btn-primary">Logout</a>
 </div>
 </div>
 

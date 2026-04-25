@@ -71,6 +71,7 @@ $userdata = mysqli_fetch_array($result, MYSQLI_BOTH);
   </div>
 
   <button type="submit" class="btn btn-primary">Update</button>
+  <a href="dashboarduser.php" class="btn btn-primary">Back</a>
 
 </form>
 </div>
