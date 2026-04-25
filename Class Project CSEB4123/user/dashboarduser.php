@@ -6,34 +6,29 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <?php
-//correction
 include "../db.php";
 
 session_start();
-/*if(isset($_SESSION["user_id"])){
-    $user= $_SESSION["user_id"];
-    echo "Welcome $user";
-}*/
 
-//creating temporary session first
-$_SESSION["users_id"] = 1;
-$_SESSION['username'] = "testuser";
+/* ✅ FIX: check session instead of forcing user */
+if (!isset($_SESSION["users_id"])) {
+    header("Location: login.php");
+    exit();
+}
+
+// ✅ FIX: use logged-in user ID from session
+$users_id = $_SESSION["users_id"];
 
 
 //get data from database using sql query
-
-$users_id = $_SESSION["users_id"];
-
 $sql = "SELECT * FROM users WHERE users_id = '$users_id' ";
-//execute sql statement
 $result = mysqli_query($conn, $sql);
-//convert the data to array form
 $userdata = mysqli_fetch_array($result,MYSQLI_BOTH);
 
-//same thing but get data from registered events
-//get data from db
-//sql query
+
+//get registered events
 $sql2 = "SELECT categories.category_name 
         FROM registrations
         JOIN categories 
@@ -68,20 +63,19 @@ $result2 = mysqli_query($conn, $sql2);
       <input type="text" class="form-control" value="<?php echo $userdata["email"]; ?>"readonly>
     </div>
   </div>
-    <div class="row mb-3">
+  <div class="row mb-3">
     <label class="col-sm-2 col-form-label">Username:</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" value="<?php echo $userdata["username"]; ?>"readonly>
     </div>
   </div>
-    <div class="row mb-3">
+  <div class="row mb-3">
     <label class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" value="<?php echo $userdata["password"]; ?>"readonly>
     </div>
   </div>
   <a href="profile.php" class="btn btn-primary">Edit Info</a>
-  <!--<button onclick='document.location.href="profile.php";' class="btn btn-primary">Edit Info</button>-->
 </form>
 </div>
 
@@ -99,7 +93,5 @@ $result2 = mysqli_query($conn, $sql2);
 </div>
 </div>
 
-
-    
 </body>
 </html>

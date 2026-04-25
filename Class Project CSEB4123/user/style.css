@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif; 
+    background-image: url('img1.jpg');
+	background-position: center;
+	background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px; 
+}
+
+.logbox {
+    background-color: white; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    width: 420px; 
+    text-align: center; 
+}
+
+.logbox h1 {
+    margin-bottom: 20px; 
+    font-size: 24px; 
+    color: #333; 
+}
+
+.logbox label {
+    display: block; 
+    margin-bottom: 5px; 
+    color: #666; 
+}
+
+.logbox .username,
+.logbox .password {
+	color: #333;             
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;     
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.logbox button {
+    background-color: #1a8cff; 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    width: 100%; 
+}
+
+.logbox button:hover {
+    background-color: #3b82f6; 
+}
+
+.logbox p {
+    margin-top: 15px;
+}
+
+.logbox a {
+    color: blue;
+}
+
+.logbox a:hover {
+    text-decoration: underline;
+}
+
+.logbox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1; 
+    padding: 5px;
+    font-size: 14px;
+}
+
+.avatar-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+	margin: auto;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: none;
+    background: #62e474;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.tab-btn:hover {
+    background: #4dc15d;
+}
+
+.tab-btn.active {
+    background: #333;
+    color: white;
+}
+

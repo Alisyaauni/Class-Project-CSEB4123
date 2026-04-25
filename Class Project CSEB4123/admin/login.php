@@ -2,11 +2,14 @@
 session_start();
 include("../db.php");
 
+$error = ""; // variable to store error message
+
 if(isset($_POST['login'])){
 
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    // simple query (easy to explain)
     $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
     $result = mysqli_query($conn, $query);
 
@@ -15,7 +18,7 @@ if(isset($_POST['login'])){
         header("Location: dashboard.php");
         exit();
     } else {
-        echo "Invalid username or password!";
+        $error = "Invalid username or password!";
     }
 }
 ?>
@@ -32,6 +35,13 @@ if(isset($_POST['login'])){
 
     <h2>Welcome, Admin!</h2>
 
+    <!-- Show error message -->
+    <?php if($error != "") { ?>
+        <script>
+            alert("<?php echo $error; ?>");
+        </script>
+    <?php } ?>
+
     <form method="POST">
 
         <input type="text" name="username" placeholder="Username" required>
@@ -45,5 +55,6 @@ if(isset($_POST['login'])){
     </form>
 
 </div>
+
 </body>
 </html>

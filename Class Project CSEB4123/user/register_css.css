@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif; 
+    background-image: url('img2.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+.first {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    width: 400px;
+	margin-left: 50px;
+	margin-top: 60px;
+}
+
+
+.name, .age, .phone, .email {
+    width: 70%;       
+    padding: 5px;          
+    margin: 3px ;          
+    border: 1px solid #ccc; 
+    border-radius: 5px;     
+    box-sizing: border-box; 
+}
+
+
+.button-submit , .button-logout {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+}
+
+.button-reset{
+    padding: 10px 15px;
+    background-color: #71c4f8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
