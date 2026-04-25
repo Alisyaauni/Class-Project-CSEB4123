@@ -79,6 +79,7 @@ $resultsqlcategory = mysqli_query($conn, $sqlcategory);
   </div>  
 
   <button type="submit" class="btn btn-primary">Join</button>
+  <a href="dashboarduser.php" class="btn btn-primary">Back</a>
 
 </form>
 </div>
