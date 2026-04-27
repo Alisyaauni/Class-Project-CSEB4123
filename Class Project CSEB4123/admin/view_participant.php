@@ -102,7 +102,7 @@ $catData = mysqli_fetch_assoc($catResult);
         <h2>Participants</h2>
     </div>
 
-    <!-- 🔥 SUMMARY -->
+    <!-- SUMMARY -->
     <div class="summary-cards">
         <div class="card participants-card">
             <div class="card-title">👥 Total Participants</div>
@@ -115,7 +115,7 @@ $catData = mysqli_fetch_assoc($catResult);
         </div>
     </div>
 
-    <!-- 🔍 SEARCH CATEGORY -->
+    <!-- SEARCH CATEGORY -->
 <div class="section-card">
     <form method="POST" class="search-form">
 
@@ -131,7 +131,7 @@ $catData = mysqli_fetch_assoc($catResult);
     </form>
 </div>
 
-    <!-- 👥 TABLE -->
+    <!-- TABLE -->
      <h3>
 <?php 
 if ($search != "") {
@@ -145,7 +145,7 @@ if ($search != "") {
 </h3><br>
 
 
-    <!-- 📊 CATEGORY CARDS -->
+    <!-- CATEGORY CARDS -->
     <div class="category-cards">
         <?php while ($row = mysqli_fetch_assoc($countResult)) { ?>
             <div class="category-card">

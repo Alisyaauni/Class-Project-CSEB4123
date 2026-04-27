@@ -12,13 +12,13 @@ include "../db.php";
 
 session_start();
 
-/* ✅ FIX: check session instead of forcing user */
+/* FIX: check session instead of forcing user */
 if (!isset($_SESSION["users_id"])) {
     header("Location: login.php");
     exit();
 }
 
-// ✅ FIX: use logged-in user ID from session
+// FIX: use logged-in user ID from session
 $users_id = $_SESSION["users_id"];
 
 

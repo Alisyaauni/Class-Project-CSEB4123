@@ -59,7 +59,7 @@ $userdata = mysqli_fetch_array($result, MYSQLI_BOTH);
   <div class="row mb-3">
     <label class="col-sm-2 col-form-label">Username:</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="username" value="<?php echo $userdata["username"]; ?>">
+      <input type="text" class="form-control" name="username" value="<?php echo $userdata["username"]; ?>" readonly>
     </div>
   </div>
 
