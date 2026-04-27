@@ -18,6 +18,7 @@ if (!isset($_SESSION['admin'])) {
 <body>
 
 <!-- SIDEBAR -->
+
 <div class="sidebar">
     <h2 class="logo">🏃 RunAdmin</h2>
 
@@ -48,7 +49,7 @@ if (!isset($_SESSION['admin'])) {
         </div>
     </div>
 
-    <!-- DASHBOARD CARDS (your original content) -->
+    <!-- DASHBOARD CARDS -->
     <div class="grid">
 
         <a href="category_crud.php" class="card">
