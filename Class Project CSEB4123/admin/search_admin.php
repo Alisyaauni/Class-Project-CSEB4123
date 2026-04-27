@@ -38,6 +38,7 @@ $result = mysqli_query($conn, $sql);
 <meta charset="UTF-8">
 <title>Admin Dashboard</title>
 <link rel="stylesheet" href="../css/admindashboard.css">
+<link rel="stylesheet" href="../css/search_admin.css">
 </head>
 
 <body>
@@ -59,12 +60,11 @@ $result = mysqli_query($conn, $sql);
 <!-- MAIN CONTENT -->
 <div class="main">
 
- <div class="container mt-5">
-    <h2>Welcome, admin!</h2>
-</div>
+    <div class="topbar">
+        <h2>Search Participants</h2>
+    </div>
 
 <div style="margin-top: 20px;">
-    <h3>Search Participants</h3>
 
     <form method="GET">
         <input type="text" name="search" placeholder="Search by ID or Name" value="<?php echo $search; ?>">

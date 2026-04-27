@@ -1,0 +1,33 @@
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #ffffff;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+	background-color: #1e293b; /* dark blue */
+	color: #ffffff;
+	text-align: left;
+	padding: 12px;
+	font-size: 14px;
+}
+
+table td {
+	padding: 12px;
+	border-bottom: 1px solid #e5e7eb;
+	font-size: 14px;
+}
+
+/* Hover Effect */
+table tr:hover {
+	background-color: #f1f5f9;
+}
+
+table,
+th,
+td {
+	border: none;
+}
